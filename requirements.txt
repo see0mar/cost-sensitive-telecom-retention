@@ -1,0 +1,23 @@
+# Cost-Sensitive Telecom Retention Pipeline
+# Python 3.10+
+#
+# Install:
+#   pip install -r requirements.txt
+
+# ── Core data & ML ─────────────────────────────────────────────────────────
+numpy>=1.24,<2.0
+pandas>=2.0
+scikit-learn>=1.3
+lightgbm>=4.0
+pyarrow>=12.0          # Parquet I/O backend
+
+# ── Explainability ─────────────────────────────────────────────────────────
+shap>=0.44
+
+# ── Visualisation ──────────────────────────────────────────────────────────
+matplotlib>=3.7
+seaborn>=0.13
+
+# ── Notebook ───────────────────────────────────────────────────────────────
+jupyter>=1.0
+ipykernel>=6.0
