@@ -1,0 +1,15 @@
+# Cost-sensitive telecom retention demo
+# Tested with: python 3.12.3, pandas 3.0.2, numpy 2.4.4, scikit-learn 1.8.0, lightgbm 4.7.0,
+#              shap 0.54.1, optuna 5.0.0, matplotlib 3.10.8, seaborn 0.13.2, pyarrow 26.0.1, joblib 1.5.3
+# No version limits are set; other versions are untested.
+pandas
+numpy
+scikit-learn
+lightgbm
+optuna
+shap
+matplotlib
+seaborn
+pyarrow
+joblib
+jupyter
