@@ -31,6 +31,8 @@ The project turns that idea into a testable pipeline:
 ├── docs/figures/                          figures used below
 ├── requirements.txt
 ├── LICENSE
+├── CITATION.cff                           how to cite this work
+├── .gitattributes                         GitHub language-statistics setting
 ├── data/                                  created by the generator (not committed)
 └── work/                                  created by the notebooks (not committed)
 ```
@@ -47,7 +49,7 @@ python generate_panel_data.py --validate               # creates data/ (generati
 jupyter notebook                                       # run notebooks 01 -> 04 in order
 ```
 
-Each notebook saves files in `work/` for the next one, so run them **in order**. All four take about 2.5 minutes together on a laptop-class machine (most of it is Optuna in notebook 03).
+Each notebook saves files in `work/` for the next one, so run them **in order**. All four take about 2.5 minutes together on a laptop-class machine (most of it is Optuna in notebook 03). The notebooks in this repository already contain their outputs, so every plot and table can be read on GitHub without running anything.
 
 *Google Colab / Kaggle:* each notebook has a two-line settings cell (`DATA_DIR`, `WORK_DIR`) and instructions. The local layout above is the tested path; the Colab and Kaggle settings are provided but not yet tested.
 
@@ -78,7 +80,7 @@ Code style is deliberately plain: short cells, no custom classes, two tiny helpe
 
 | Model | Test AUC |
 |---|---|
-| Decision tree (depth 4) | 0.770 |
+| Decision tree (depth 4) | 0.769 |
 | Logistic regression | 0.832 |
 | LightGBM, default | 0.838 |
 | **LightGBM, tuned with Optuna (20 trials)** | **0.841** |
@@ -120,7 +122,6 @@ One known detail: revenue is stored as `float32`, so 1 of 200,000 customers sits
 - **Synthetic by construction:** results demonstrate the method, not real-world performance.
 - **Assumed economics:** 500 EGP and 50 EGP are illustrative inputs; change them in notebook 04.
 - **No causal claim:** the model predicts who will compress, not who will respond to an offer.
-- **Not yet done:** test on an external public dataset, SQL examples, and a dashboard.
 
 ## Tested with
 

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Cost-Sensitive Prediction of Value Compression in Telecom (synthetic demonstration)"
+type: software
+authors:
+  - family-names: "ElTokhy"
+    given-names: "Omar"
+repository-code: "https://github.com/see0mar/cost-sensitive-telecom-retention"
+license: MIT
+version: 1.0.0
+abstract: "A beginner-readable machine-learning pipeline that detects telecom customers who quietly cut their spend before leaving, and chooses the contact threshold from the cost of an offer versus the value of a save. All data is synthetic."
+keywords:
+  - churn prediction
+  - cost-sensitive learning
+  - LightGBM
+  - Optuna
+  - SHAP
+  - synthetic data

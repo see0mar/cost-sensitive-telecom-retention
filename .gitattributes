@@ -1,0 +1,3 @@
+# Optional: stops GitHub's language bar from showing 100% "Jupyter Notebook".
+# Not tested by the author; delete this file if the language bar looks wrong.
+*.ipynb linguist-detectable=false

@@ -129,7 +129,7 @@ Notebook 04, section 1, on the test set.
 
 | Model | Validation AUC | Test AUC |
 |---|---:|---:|
-| Decision tree | 0.766 | 0.770 |
+| Decision tree | 0.766 | 0.769 |
 | Logistic regression | 0.830 | 0.832 |
 | LightGBM, default | 0.838 | 0.838 |
 | LightGBM, tuned | 0.841 | 0.841 |
@@ -171,7 +171,7 @@ At 0.09: precision 28%, recall 78%, and net value about 2.2× the default (+836,
 
 ## 11. Export
 
-`work/retention_model.joblib` is one dictionary: the model, the 23-feature list, the chosen threshold, V and C, the LightGBM and scikit-learn versions, and a note that it was trained on synthetic data. Notebook 04 reloads it, confirms identical predictions, and scores five "new" customers (risk and "send offer" / "no offer"). `work/test_predictions.parquet` stores test-set scores and flags for later SQL and dashboard work.
+`work/retention_model.joblib` is one dictionary: the model, the 23-feature list, the chosen threshold, V and C, the LightGBM and scikit-learn versions, and a note that it was trained on synthetic data. Notebook 04 reloads it, confirms identical predictions, and scores five "new" customers (risk and "send offer" / "no offer"). `work/test_predictions.parquet` stores the test-set scores and flags.
 
 ## 12. Validation performed
 
@@ -191,4 +191,3 @@ Not covered: Colab and Kaggle paths, other library versions, and any real data.
 - **Label design.** The label uses a ≤ −25% revenue change; about a quarter of the generator's compressing customers do not reach it inside the window, and a few stable customers cross it by noise.
 - **Correlation, not response.** The model predicts who will compress, not who will respond to an offer; uplift modelling and a control group would be the next step.
 - **Calibration** was checked on one dataset and should be re-checked on any new one.
-- **Planned extensions:** a portability test on an external public dataset, SQL analysis of the two tables, and a dashboard.
